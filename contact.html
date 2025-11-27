@@ -1,216 +1,257 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Contact — Mulbut Shoes</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact - Mulbust</title>
+  <meta name="description" content="Discover artisanal lighting that transforms spaces. Explore Mulbust's curated collection of chandeliers, pendant lights, and more.">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.min.css">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <style>
+    body {
+      font-family: 'Lato', sans-serif;
+      color: #2C3E50;
+      background-color: #FDFEFE;
+    }
+    h1, h2, h3, h4, h5, h6, .navbar-brand {
+      font-family: 'Playfair Display', serif;
+    }
+    .navbar-dark .navbar-nav .nav-link {
+        color: rgba(253, 254, 254, .85);
+    }
+    .navbar-dark .navbar-nav .nav-link:hover, .navbar-dark .navbar-nav .nav-link:focus {
+        color: #FDFEFE;
+    }
+    .btn-primary {
+        background-color: #E1B12C;
+        border-color: #E1B12C;
+        color: #2C3E50;
+        font-weight: bold;
+    }
+    .btn-primary:hover {
+        background-color: #c89d26; 
+        border-color: #c89d26;
+    }
+    .bg-dark-custom {
+        background-color: #2C3E50;
+    }
+    .text-light-custom {
+        color: #FDFEFE;
+    }
+    .text-primary-custom {
+        color: #E1B12C;
+    }
+    .contact-info-icon {
+        fill: #E1B12C;
+        width: 24px;
+        height: 24px;
+        vertical-align: middle;
+        margin-right: 10px;
+    }
+  </style>
 </head>
-<style>
-  
-  /* ===============================
-   CONTACT PAGE
-==================================*/
-.contact-banner {
-  position: relative;
-  height: 60vh;
-  background: url('https://images.unsplash.com/photo-1760331339913-da9637154477?q=80&w=1920&auto=format&fit=crop')
-              center/cover no-repeat;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  color: #fff;
-}
-.contact-banner .overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(180deg, rgba(0,0,0,0.55), rgba(0,0,0,0.45));
-  z-index: 1;
-}
-.contact-banner .banner-content {
-  position: relative;
-  z-index: 2;
-  max-width: 650px;
-  animation: fadeUp 1s ease forwards;
-}
-.contact-banner h1 {
-  font-size: 2.5rem;
-  margin-bottom: 0.8rem;
-  letter-spacing: -0.5px;
-}
-.contact-banner p {
-  font-size: 1.1rem;
-  color: #eee;
-  opacity: 0.9;
-}
-
-/* layout */
-.contact-section {
-  padding: var(--space-lg) 0;
-  background: var(--background);
-}
-.contact-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: var(--space-lg);
-  align-items: start;
-}
-.contact-info h2,
-.contact-form h2 {
-  margin-bottom: 0.8rem;
-}
-.info-list {
-  list-style: none;
-  margin: 1rem 0 2rem;
-}
-.info-list li {
-  margin-bottom: 0.6rem;
-  color: var(--text);
-}
-.map-wrap iframe {
-  border-radius: var(--radius);
-  box-shadow: var(--shadow-sm);
-}
-
-/* form */
-.form-group {
-  margin-bottom: 1rem;
-}
-.form-group label {
-  display: block;
-  font-weight: 500;
-  margin-bottom: 0.4rem;
-}
-.form-group input,
-.form-group textarea {
-  width: 100%;
-  padding: 0.8rem 1rem;
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  font-size: 1rem;
-  font-family: inherit;
-  outline: none;
-  transition: border 0.2s ease;
-}
-.form-group input:focus,
-.form-group textarea:focus {
-  border-color: var(--primary);
-}
-
-/* responsive */
-@media (max-width: 960px) {
-  .contact-grid {
-    grid-template-columns: 1fr;
-  }
-  .contact-banner {
-    height: 50vh;
-  }
-}
-
-</style>
 <body>
-
-  <!-- ========== HEADER ========== -->
-  <header class="header">
-    <div class="container flex-between">
-      <a class="logo" href="./index.html#home"><h2>Mulbut Shoes</h2></a>
-      <nav>
-        <ul class="nav-list">
-          <li><a class="nav-link" href="./index.html#home">Home</a></li>
-          <li><a class="nav-link" href="./index.html#about">About</a></li>
-          <li><a class="nav-link" href="./index.html#collections">Collections</a></li>
-          <li><a class="nav-link" href="./index.html#gallery">Gallery</a></li>
-          <li><a class="nav-link active" href="./contact.html">Contact</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-
-  <!-- ========== BANNER ========== -->
-  <section class="contact-banner">
-    <div class="overlay"></div>
-    <div class="banner-content">
-      <h1>Get in Touch</h1>
-      <p>We’d love to hear from you. Whether it’s a question, feedback, or a custom order request.</p>
-    </div>
-  </section>
-
-  <!-- ========== CONTACT SECTION ========== -->
-  <section class="contact-section">
-    <div class="container contact-grid">
-      <!-- LEFT INFO -->
-      <div class="contact-info">
-        <h2>Contact Information</h2>
-        <p>Reach us directly or visit our studio in Amsterdam.</p>
-
-        <ul class="info-list">
-          <li><strong>Address:</strong> Van Baerlestraat 23, Amsterdam, Netherlands</li>
-          <li><strong>Phone:</strong> +31 20 555 1234</li>
-          <li><strong>Email:</strong> hello@Mulbut Shoes.com</li>
-        </ul>
-
-        <div class="map-wrap">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2436.6306923052755!2d4.876537076864603!3d52.35785007200864!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c609f3f4a0b5a1%3A0x2de89e6a802ba7ed!2sVan%20Baerlestraat%2023%2C%201072%20AA%20Amsterdam!5e0!3m2!1sen!2snl!4v1700705000000!5m2!1sen!2snl"
-            width="100%" height="250" style="border:0;" allowfullscreen loading="lazy"></iframe>
-        </div>
-      </div>
-
-      <!-- RIGHT FORM -->
-      <div class="contact-form">
-        <h2>Send Us a Message</h2>
-        <form>
-          <div class="form-group">
-            <label for="name">Full Name</label>
-            <input id="name" name="name" type="text" placeholder="Your name" required>
-          </div>
-          <div class="form-group">
-            <label for="email">Email Address</label>
-            <input id="email" name="email" type="email" placeholder="you@example.com" required>
-          </div>
-          <div class="form-group">
-            <label for="message">Message</label>
-            <textarea id="message" name="message" rows="5" placeholder="How can we help?" required></textarea>
-          </div>
-          <button type="submit" class="btn btn-primary">Send Message</button>
-        </form>
-      </div>
-    </div>
-  </section>
-
-  <!-- ========== FOOTER ========== -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-grid">
-        <div>
-          <h3>Mulbut Shoes</h3>
-          <p>Where craftsmanship meets elegance. Designed for those who walk with purpose.</p>
-          <div class="footer-social">
-            <a href="#">f</a><a href="#">i</a><a href="#">t</a><a href="#">y</a>
-          </div>
-        </div>
-        <div class="footer-links">
-          <h4>Shop</h4>
-          <ul><li><a href="#">Men</a></li><li><a href="#">Women</a></li><li><a href="#">Custom</a></li></ul>
-        </div>
-        <div class="footer-links">
-          <h4>Info</h4>
-          <ul><li><a href="./privacy-policy.html">Privacy Policy</a></li><li><a href="#">Terms</a></li><li><a href="#">Contact</a></li></ul>
-        </div>
-        <div class="contact-card">
-          <h2 class="footer-title">Contact</h2>
-          <ul>
-            <li>📍 AIHP Horizon, 1st Floor, 445 Udyog Vihar Phase V, Sector-19, Gurugram, Haryana 122008,</li>
-            <li>📞 +91-124-456 7890</li>
-            <li>📱 +91-124-456 7890</li>
-            <li>✉️ response@dorsetindia.com</li>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark-custom">
+      <div class="container">
+        <a class="navbar-brand" href="/">Mulbust</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="/">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="products.html">Products</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="gallery.html">Gallery</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about-us.html">About Us</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="contact.html">Contact <span class="sr-only">(current)</span></a>
+            </li>
           </ul>
         </div>
       </div>
-      <div class="footer-bottom">© 2025 Mulbut Shoes. All rights reserved.</div>
+    </nav>
+  </header>
+<main class="container py-5">
+  <div class="row mb-5">
+    <div class="col-12 text-center">
+      <h1 class="display-4 text-primary-custom mb-3">Let's Connect</h1>
+      <p class="lead">We're eager to hear from you. Whether you have a question about our exquisite lighting, need design assistance, or just want to say hello, our team is ready to help.</p>
     </div>
-  </footer>
+  </div>
 
+  <div class="row">
+    <div class="col-lg-6 mb-4 mb-lg-0">
+      <div class="card shadow-sm h-100 border-0">
+        <div class="card-body p-4">
+          <h2 class="card-title text-secondary mb-4">Send Us a Message</h2>
+          <form>
+            <div class="form-group">
+              <label for="contactName">Your Full Name</label>
+              <input type="text" class="form-control" id="contactName" placeholder="John Doe" required>
+            </div>
+            <div class="form-group">
+              <label for="contactEmail">Email Address</label>
+              <input type="email" class="form-control" id="contactEmail" placeholder="name@example.com" required>
+            </div>
+            <div class="form-group">
+              <label for="contactPhone">Phone Number (Optional)</label>
+              <input type="tel" class="form-control" id="contactPhone" placeholder="(123) 456-7890">
+            </div>
+            <div class="form-group">
+              <label for="contactSubject">Subject</label>
+              <select class="form-control" id="contactSubject" required>
+                <option value="">Select a Subject</option>
+                <option value="general">General Inquiry</option>
+                <option value="sales">Sales & Orders</option>
+                <option value="press">Press & Media</option>
+                <option value="design">Design Consultation</option>
+                <option value="support">Customer Support</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="contactMessage">Your Message</label>
+              <textarea class="form-control" id="contactMessage" rows="5" placeholder="How can we assist you today?" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-lg btn-block">Submit Message</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-lg-6">
+      <div class="card shadow-sm h-100 border-0">
+        <div class="card-body p-4">
+          <h2 class="card-title text-secondary mb-4">Our Details</h2>
+          <dl class="row">
+            <dt class="col-sm-3">
+                <svg class="contact-info-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5S10.62 6.5 12 6.5s2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" fill="currentColor"/>
+                </svg>
+                Address:
+            </dt>
+            <dd class="col-sm-9">
+              <p>Mulbust Showroom<br>123 Elegance Avenue, Suite 100<br>Lumin City, LC 90210</p>
+            </dd>
+
+            <dt class="col-sm-3">
+                <svg class="contact-info-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M20 15.5c-1.25 0-2.45-.2-3.57-.57-.35-.11-.74-.03-1.02.24l-2.2 2.2c-2.83-1.44-5.15-3.75-6.59-6.59l2.2-2.2c.28-.28.36-.67.24-1.02C8.75 6.45 8.55 5.25 8.55 4c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1 0 9.39 7.61 17 17 17 .55 0 1-.45 1-1v-3.55c0-.55-.45-1-1-1z" fill="currentColor"/>
+                </svg>
+                Phone:
+            </dt>
+            <dd class="col-sm-9"><p><a href="tel:+18001234567" class="text-decoration-none text-dark-custom">(800) 123-4567</a> (Sales & Support)</p></dd>
+
+            <dt class="col-sm-3">
+                <svg class="contact-info-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" fill="currentColor"/>
+                </svg>
+                Email:
+            </dt>
+            <dd class="col-sm-9">
+              <p><a href="mailto:info@chamaklight.com" class="text-decoration-none text-dark-custom">info@chamaklight.com</a> (General Inquiries)</p>
+              <p><a href="mailto:sales@chamaklight.com" class="text-decoration-none text-dark-custom">sales@chamaklight.com</a> (Sales)</p>
+              <p><a href="mailto:press@chamaklight.com" class="text-decoration-none text-dark-custom">press@chamaklight.com</a> (Press)</p>
+            </dd>
+          </dl>
+
+          <h3 class="text-secondary mb-3">Business Hours</h3>
+          <ul class="list-unstyled">
+            <li>Monday - Friday: 9:00 AM - 6:00 PM</li>
+            <li>Saturday: 10:00 AM - 4:00 PM</li>
+            <li>Sunday: Closed</li>
+          </ul>
+
+          <h3 class="text-secondary mb-3">Visit Our Showroom</h3>
+          <div class="embed-responsive embed-responsive-16by9 rounded border mb-3">
+            <img src="./images/contact-showroom-map.jpeg" class="embed-responsive-item" alt="Map showing Mulbust showroom location" width="640" height="360">
+          </div>
+          <p class="text-muted small">Please note: This is a static map image. For interactive directions, please use your preferred mapping application.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</main><footer class="text-white pt-5 pb-4" style="background-color: #2C3E50;">
+  <div class="container text-center text-md-left">
+    <div class="row text-center text-md-left">
+      <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+        <h5 class="text-uppercase mb-4 font-weight-bold" style="color: #E1B12C;">Mulbust</h5>
+        <p>Artisanal lighting solutions designed to bring elegance and warmth to every space. Illuminate your world with timeless craftsmanship.</p>
+      </div>
+      <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+        <h5 class="text-uppercase mb-4 font-weight-bold" style="color: #E1B12C;">Products</h5>
+        <p><a href="products.html" class="text-white" style="text-decoration: none;">Chandeliers</a></p>
+        <p><a href="products.html" class="text-white" style="text-decoration: none;">Pendant Lights</a></p>
+        <p><a href="products.html" class="text-white" style="text-decoration: none;">Wall Sconces</a></p>
+        <p><a href="products.html" class="text-white" style="text-decoration: none;">Lamps</a></p>
+      </div>
+      <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+        <h5 class="text-uppercase mb-4 font-weight-bold" style="color: #E1B12C;">Quick Links</h5>
+        <p><a href="about-us.html" class="text-white" style="text-decoration: none;">About Us</a></p>
+        <p><a href="gallery.html" class="text-white" style="text-decoration: none;">Gallery</a></p>
+        <p><a href="contact.html" class="text-white" style="text-decoration: none;">Contact</a></p>
+        <p><a href="#" class="text-white" style="text-decoration: none;">FAQs</a></p>
+      </div>
+      <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+        <h5 class="text-uppercase mb-4 font-weight-bold" style="color: #E1B12C;">Contact</h5>
+        <p><i class="fas fa-home mr-3"></i> New York, NY 10012, US</p>
+        <p><i class="fas fa-envelope mr-3"></i> info@chamaklight.com</p>
+        <p><i class="fas fa-phone mr-3"></i> + 01 234 567 88</p>
+      </div>
+    </div>
+    <hr class="mb-4">
+    <div class="row align-items-center">
+      <div class="col-md-7 col-lg-8">
+        <p>© 2023 Mulbust. All rights reserved.
+          <a href="privacy-policy.html" class="text-white ml-3" style="text-decoration: none;">Privacy Policy</a>
+          <a href="terms-and-conditions.html" class="text-white ml-3" style="text-decoration: none;">Terms & Conditions</a>
+        </p>
+      </div>
+      <div class="col-md-5 col-lg-4">
+        <div class="text-center text-md-right">
+          <ul class="list-unstyled list-inline">
+            
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<div id="cookieConsentBanner" class="fixed-bottom p-3 text-white" style="background-color: #2C3E50; display: none; border-top: 1px solid #E1B12C;">
+  <div class="container d-flex justify-content-between align-items-center">
+    <span>This website uses cookies to enhance your experience.</span>
+    <button id="acceptCookieButton" class="btn btn-sm btn-primary">Accept</button>
+  </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" crossorigin="anonymous"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const cookieConsentBanner = document.getElementById('cookieConsentBanner');
+    const acceptCookieButton = document.getElementById('acceptCookieButton');
+    const randomId = Math.random().toString(36).substring(7);
+    const consentKey = 'cookieConsent_' + randomId;
+
+    if (!localStorage.getItem(consentKey)) {
+      cookieConsentBanner.style.display = 'block';
+    }
+
+    acceptCookieButton.addEventListener('click', function() {
+      localStorage.setItem(consentKey, 'true');
+      cookieConsentBanner.style.display = 'none';
+    });
+  });
+</script>
 </body>
 </html>

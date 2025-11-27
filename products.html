@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Products - Mulbust</title>
+  <meta name="description" content="Discover artisanal lighting that transforms spaces. Explore Mulbust's curated collection of chandeliers, pendant lights, and more.">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.min.css">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <style>
+    body {
+      font-family: 'Lato', sans-serif;
+      color: #2C3E50;
+      background-color: #FDFEFE;
+    }
+    h1, h2, h3, h4, h5, h6, .navbar-brand {
+      font-family: 'Playfair Display', serif;
+    }
+    .navbar-dark .navbar-nav .nav-link {
+        color: rgba(253, 254, 254, .85);
+    }
+    .navbar-dark .navbar-nav .nav-link:hover, .navbar-dark .navbar-nav .nav-link:focus {
+        color: #FDFEFE;
+    }
+    .btn-primary {
+        background-color: #E1B12C;
+        border-color: #E1B12C;
+        color: #2C3E50;
+        font-weight: bold;
+    }
+    .btn-primary:hover {
+        background-color: #c89d26; 
+        border-color: #c89d26;
+    }
+    .card-title {
+        font-family: 'Playfair Display', serif;
+        color: #2C3E50;
+    }
+    .card {
+        border: none;
+        box-shadow: 0 4px 8px rgba(0,0,0,.1);
+        transition: transform 0.2s ease-in-out;
+    }
+    .card:hover {
+        transform: translateY(-5px);
+    }
+    .filter-sidebar {
+        background-color: #FDFEFE;
+        border-right: 1px solid #eee;
+        padding: 1.5rem;
+    }
+    @media (max-width: 991.98px) {
+        .filter-sidebar {
+            border-right: none;
+            border-bottom: 1px solid #eee;
+        }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #2C3E50;">
+      <div class="container">
+        <a class="navbar-brand" href="/">Mulbust</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="/">Home</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="products.html">Products <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="gallery.html">Gallery</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about-us.html">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+<main class="container py-5">
+    <h1 class="text-center mb-5 display-4">Our Exquisite Lighting Collections</h1>
+    <div class="row">
+        <div class="col-lg-3 d-none d-lg-block filter-sidebar">
+            <h4 class="mb-3">Filter Products</h4>
+            <form>
+                <div class="form-group">
+                    <label for="categoryFilter">Category</label>
+                    <select class="form-control" id="categoryFilter">
+                        <option>All Categories</option>
+                        <option>Chandeliers</option>
+                        <option>Pendant Lights</option>
+                        <option>Floor Lamps</option>
+                        <option>Table Lamps</option>
+                        <option>Wall Sconces</option>
+                        <option>Outdoor Lighting</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="styleFilter">Style</label>
+                    <select class="form-control" id="styleFilter">
+                        <option>All Styles</option>
+                        <option>Modern</option>
+                        <option>Classic</option>
+                        <option>Industrial</option>
+                        <option>Minimalist</option>
+                        <option>Art Deco</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="materialFilter">Material</label>
+                    <select class="form-control" id="materialFilter">
+                        <option>All Materials</option>
+                        <option>Brass</option>
+                        <option>Glass</option>
+                        <option>Wood</option>
+                        <option>Metal</option>
+                        <option>Crystal</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="priceRange">Price Range</label>
+                    <input type="range" class="form-control-range" id="priceRange" min="0" max="5000" step="100">
+                    <small class="form-text text-muted">$0 - $5000+</small>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">Apply Filters</button>
+            </form>
+        </div>
+        <div class="col-lg-9">
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <button class="btn btn-secondary d-lg-none" type="button" data-toggle="collapse" data-target="#mobileFilterCollapse" aria-expanded="false" aria-controls="mobileFilterCollapse">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-funnel" viewBox="0 0 16 16">
+                        <path d="M1.5 1.5A.5.5 0 0 1 2 1h12a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.128.334L10 8.692V13.5a.5.5 0 0 1-.342.474l-3 1A.5.5 0 0 1 6 14.5V8.692L1.628 3.834A.5.5 0 0 1 1.5 3.5v-2zm1 .5v1.308L6.872 7.708A.5.5 0 0 1 7 8.02V13.5a.25.25 0 0 0 .082.189l3-1A.25.25 0 0 0 10 13.5V8.02a.5.5 0 0 1 .128-.312l5.36-5.4L13 2H2z"/>
+                    </svg>
+                    Filters
+                </button>
+                <div class="collapse d-lg-none mt-3" id="mobileFilterCollapse">
+                    <div class="filter-sidebar mb-3">
+                        <h5 class="mb-3">Filter Products</h5>
+                        <form>
+                            <div class="form-group">
+                                <label for="categoryFilterMobile">Category</label>
+                                <select class="form-control" id="categoryFilterMobile">
+                                    <option>All Categories</option>
+                                    <option>Chandeliers</option>
+                                    <option>Pendant Lights</option>
+                                    <option>Floor Lamps</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="styleFilterMobile">Style</label>
+                                <select class="form-control" id="styleFilterMobile">
+                                    <option>All Styles</option>
+                                    <option>Modern</option>
+                                    <option>Classic</option>
+                                </select>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-block">Apply Filters</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="form-group mb-0 ml-auto">
+                    <label for="sortOrder" class="mr-2 d-none d-md-inline">Sort By:</label>
+                    <select class="form-control d-inline w-auto" id="sortOrder">
+                        <option>Featured</option>
+                        <option>Price: Low to High</option>
+                        <option>Price: High to Low</option>
+                        <option>Newest Arrivals</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="row">
+                
+                <div class="col-12 col-md-6 col-lg-4 mb-4">
+                    <div class="card h-100">
+                        <img src="./images/products-chandelier-crystal.jpeg" class="card-img-top" alt="Elegant Crystal Chandelier" width="640" height="480">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Grand Crystal Chandelier</h5>
+                            <p class="card-text text-muted">A timeless piece radiating luxury.</p>
+                            <p class="mb-2" style="color: #E1B12C; font-weight: bold;">$1,250.00</p>
+                            <a href="#" class="btn btn-primary btn-sm">View Details</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-12 col-md-6 col-lg-4 mb-4">
+                    <div class="card h-100">
+                        <img src="./images/products-pendant-minimalist.jpeg" class="card-img-top" alt="Minimalist Industrial Pendant Light" width="640" height="480">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Industrial Chic Pendant</h5>
+                            <p class="card-text text-muted">Sleek design with a modern edge.</p>
+                            <p class="mb-2" style="color: #E1B12C; font-weight: bold;">$320.00</p>
+                            <a href="#" class="btn btn-primary btn-sm">View Details</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-12 col-md-6 col-lg-4 mb-4">
+                    <div class="card h-100">
+                        <img src="./images/products-floorlamp-scandinavian.jpeg" class="card-img-top" alt="Scandinavian Style Floor Lamp" width="640" height="480">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Nordic Floor Lamp</h5>
+                            <p class="card-text text-muted">Warm light, natural wood finish.</p>
+                            <p class="mb-2" style="color: #E1B12C; font-weight: bold;">$480.00</p>
+                            <a href="#" class="btn btn-primary btn-sm">View Details</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-12 col-md-6 col-lg-4 mb-4">
+                    <div class="card h-100">
+                        <img src="./images/products-sconce-brass.jpeg" class="card-img-top" alt="Antique Brass Wall Sconce" width="640" height="480">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Classic Brass Sconce</h5>
+                            <p class="card-text text-muted">Adds a touch of vintage elegance.</p>
+                            <p class="mb-2" style="color: #E1B12C; font-weight: bold;">$185.00</p>
+                            <a href="#" class="btn btn-primary btn-sm">View Details</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-12 col-md-6 col-lg-4 mb-4">
+                    <div class="card h-100">
+                        <img src="./images/products-tablelamp-ceramic.jpeg" class="card-img-top" alt="Hand-painted Ceramic Table Lamp" width="640" height="480">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Artisan Ceramic Lamp</h5>
+                            <p class="card-text text-muted">Unique, handcrafted for your space.</p>
+                            <p class="mb-2" style="color: #E1B12C; font-weight: bold;">$295.00</p>
+                            <a href="#" class="btn btn-primary btn-sm">View Details</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-12 col-md-6 col-lg-4 mb-4">
+                    <div class="card h-100">
+                        <img src="./images/products-outdoor-lantern.jpeg" class="card-img-top" alt="Modern Outdoor Wall Lantern" width="640" height="480">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Contemporary Outdoor Lantern</h5>
+                            <p class="card-text text-muted">Durable and stylish for exteriors.</p>
+                            <p class="mb-2" style="color: #E1B12C; font-weight: bold;">$210.00</p>
+                            <a href="#" class="btn btn-primary btn-sm">View Details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main><footer class="text-white pt-5 pb-4" style="background-color: #2C3E50;">
+  <div class="container text-center text-md-left">
+    <div class="row text-center text-md-left">
+      <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+        <h5 class="text-uppercase mb-4 font-weight-bold" style="color: #E1B12C;">Mulbust</h5>
+        <p>Artisanal lighting solutions designed to bring elegance and warmth to every space. Illuminate your world with timeless craftsmanship.</p>
+      </div>
+      <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+        <h5 class="text-uppercase mb-4 font-weight-bold" style="color: #E1B12C;">Products</h5>
+        <p><a href="products.html" class="text-white" style="text-decoration: none;">Chandeliers</a></p>
+        <p><a href="products.html" class="text-white" style="text-decoration: none;">Pendant Lights</a></p>
+        <p><a href="products.html" class="text-white" style="text-decoration: none;">Wall Sconces</a></p>
+        <p><a href="products.html" class="text-white" style="text-decoration: none;">Lamps</a></p>
+      </div>
+      <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+        <h5 class="text-uppercase mb-4 font-weight-bold" style="color: #E1B12C;">Quick Links</h5>
+        <p><a href="about-us.html" class="text-white" style="text-decoration: none;">About Us</a></p>
+        <p><a href="gallery.html" class="text-white" style="text-decoration: none;">Gallery</a></p>
+        <p><a href="contact.html" class="text-white" style="text-decoration: none;">Contact</a></p>
+        <p><a href="#" class="text-white" style="text-decoration: none;">FAQs</a></p>
+      </div>
+      <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+        <h5 class="text-uppercase mb-4 font-weight-bold" style="color: #E1B12C;">Contact</h5>
+        <p><i class="fas fa-home mr-3"></i> New York, NY 10012, US</p>
+        <p><i class="fas fa-envelope mr-3"></i> info@chamaklight.com</p>
+        <p><i class="fas fa-phone mr-3"></i> + 01 234 567 88</p>
+      </div>
+    </div>
+    <hr class="mb-4">
+    <div class="row align-items-center">
+      <div class="col-md-7 col-lg-8">
+        <p>© 2023 Mulbust. All rights reserved.
+          <a href="privacy-policy.html" class="text-white ml-3" style="text-decoration: none;">Privacy Policy</a>
+          <a href="terms-and-conditions.html" class="text-white ml-3" style="text-decoration: none;">Terms & Conditions</a>
+        </p>
+      </div>
+      <div class="col-md-5 col-lg-4">
+        <div class="text-center text-md-right">
+          <ul class="list-unstyled list-inline">
+            
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<div id="cookieConsentBanner" class="fixed-bottom p-3 text-white" style="background-color: #2C3E50; display: none; border-top: 1px solid #E1B12C;">
+  <div class="container d-flex justify-content-between align-items-center">
+    <span>This website uses cookies to enhance your experience.</span>
+    <button id="acceptCookieButton" class="btn btn-sm btn-primary">Accept</button>
+  </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" crossorigin="anonymous"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const cookieConsentBanner = document.getElementById('cookieConsentBanner');
+    const acceptCookieButton = document.getElementById('acceptCookieButton');
+    const randomId = Math.random().toString(36).substring(7);
+    const consentKey = 'cookieConsent_' + randomId;
+
+    if (!localStorage.getItem(consentKey)) {
+      cookieConsentBanner.style.display = 'block';
+    }
+
+    acceptCookieButton.addEventListener('click', function() {
+      localStorage.setItem(consentKey, 'true');
+      cookieConsentBanner.style.display = 'none';
+    });
+  });
+</script>
+</body>
+</html>
